@@ -8,7 +8,7 @@ pipeline {
         ansiColor('xterm')
     }
     stages{
-        stage('Test') {
+        stage('test') {
             steps{
             sh """
            sh "echo this is testing"
