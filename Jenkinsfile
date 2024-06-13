@@ -38,6 +38,18 @@ pipeline {
                 """
             }
         }
+        stage('sonar scan'){
+            environment{
+                scannerHome = tool 'sonar-6.0' //refering scanner agent in jenkins
+            }
+            steps{
+                script{
+                    withSonarQubeEnv('sonar-6.0') { //refering sonar server
+                        sh "${scannerHome}/bin/sonar-scanner"
+                    }
+                } 
+            }
+        }
         stage('Nexus artifact upload'){
             steps{
             script{
