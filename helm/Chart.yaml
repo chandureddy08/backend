@@ -1,0 +1,4 @@
+apiVersion: v1
+name: backend
+version: 1.0.0
+description: This is Helm implementation of backend in expense project.
