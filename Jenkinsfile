@@ -54,11 +54,6 @@ pipeline {
             }
         }
         stage('Deploy') {
-            when {
-                expression {
-                    params.deploy
-                }
-            }
             steps {
                 sh """
                     aws eks update-kubeconfig --region ${env.region} --name expense-dev
