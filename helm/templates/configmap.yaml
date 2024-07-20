@@ -4,4 +4,4 @@ metadata:
   name: backend
   namespace: expense
 data:
-  DB_HOST: db-chandureddy.online  # mysql component service name
+  DB_HOST: db-dev.chandureddy.online  # mysql component service name
